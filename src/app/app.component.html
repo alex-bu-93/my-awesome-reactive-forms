@@ -13,6 +13,11 @@
             </app-reactive-input>
           </div>
           <div class="col-md">
+            <app-reactive-input [fieldId]="'userLastName'"
+                                [control]="feedbackForm.get('userLastName')">
+            </app-reactive-input>
+          </div>
+          <div class="col-md">
             <app-reactive-input [fieldId]="'userEmail'"
                                 [control]="feedbackForm.get('userEmail')">
             </app-reactive-input>

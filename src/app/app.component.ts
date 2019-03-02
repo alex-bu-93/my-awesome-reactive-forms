@@ -14,6 +14,9 @@ export class AppComponent {
     'userName': new FormControl(
       null,
       [Validators.required, Validators.pattern(CYRILLIC_PATTERN)]),
+    'userLastName': new FormControl(
+      null,
+      [Validators.required, Validators.pattern(CYRILLIC_PATTERN)]),
     'userEmail': new FormControl(
       null,
       [Validators.required, Validators.pattern(EMAIL_PATTERN)])
