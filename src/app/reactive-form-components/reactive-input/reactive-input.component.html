@@ -1,0 +1,10 @@
+<div class="form-group">
+
+  <label [for]="fieldId" class="label text-muted"> {{label}} </label>
+  <input [formControl]="control"
+         [id]="fieldId"
+         autocomplete="off"
+         class="form-control"/>
+  <app-reactive-validation [validationErrors]="validationErrors"></app-reactive-validation>
+
+</div>

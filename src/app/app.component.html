@@ -7,29 +7,15 @@
       <h5 class="card-title">Describe the case and leave contact details</h5>
       <form [formGroup]="feedbackForm">
         <div class="form-row">
-          <div class="col-md form-group">
-            <label for="userName" class="label text-muted"> Name </label>
-            <input formControlName="userName"
-                   id="userName"
-                   autocomplete="off"
-                   class="form-control"/>
-            <div *ngIf="feedbackForm.get('userName').touched && feedbackForm.get('userName').invalid">
-              <app-reactive-validation
-                [validationErrors]="feedbackForm.get('userName').errors">
-              </app-reactive-validation>
-            </div>
+          <div class="col-md">
+            <app-reactive-input [fieldId]="'userName'"
+                                [control]="feedbackForm.get('userName')">
+            </app-reactive-input>
           </div>
-          <div class="col-md form-group">
-            <label for="userEmail" class="label text-muted"> Email </label>
-            <input formControlName="userEmail"
-                   id="userEmail"
-                   autocomplete="off"
-                   class="form-control"/>
-            <ng-container *ngIf="feedbackForm.get('userEmail').touched && feedbackForm.get('userEmail').invalid">
-              <app-reactive-validation
-                [validationErrors]="feedbackForm.get('userEmail').errors">
-              </app-reactive-validation>
-            </ng-container>
+          <div class="col-md">
+            <app-reactive-input [fieldId]="'userEmail'"
+                                [control]="feedbackForm.get('userEmail')">
+            </app-reactive-input>
           </div>
         </div>
 

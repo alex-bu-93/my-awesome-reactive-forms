@@ -5,11 +5,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule }            from './app-routing.module';
 import { AppComponent }                from './app.component';
 import { ReactiveValidationComponent } from './reactive-form-components/reactive-validation/reactive-validation.component';
+import { ReactiveInputComponent }      from './reactive-form-components/reactive-input/reactive-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReactiveValidationComponent
+    ReactiveValidationComponent,
+    ReactiveInputComponent
   ],
   imports: [
     BrowserModule,
