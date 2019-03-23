@@ -14,12 +14,9 @@
                    autocomplete="off"
                    class="form-control"/>
             <div *ngIf="feedbackForm.get('userName').touched && feedbackForm.get('userName').invalid">
-              <div *ngIf="feedbackForm.get('userName').errors['required']" class="validation-message">
-                Need to fill
-              </div>
-              <div *ngIf="feedbackForm.get('userName').errors['pattern']" class="validation-message">
-                Only cyrillic
-              </div>
+              <app-reactive-validation
+                [validationErrors]="feedbackForm.get('userName').errors">
+              </app-reactive-validation>
             </div>
           </div>
           <div class="col-md form-group">
@@ -29,12 +26,9 @@
                    autocomplete="off"
                    class="form-control"/>
             <ng-container *ngIf="feedbackForm.get('userEmail').touched && feedbackForm.get('userEmail').invalid">
-              <div *ngIf="feedbackForm.get('userEmail').errors['required']" class="validation-message">
-                Need to fill
-              </div>
-              <div *ngIf="feedbackForm.get('userEmail').errors['pattern']" class="validation-message">
-                Incorrect Email
-              </div>
+              <app-reactive-validation
+                [validationErrors]="feedbackForm.get('userEmail').errors">
+              </app-reactive-validation>
             </ng-container>
           </div>
         </div>
